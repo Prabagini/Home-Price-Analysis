@@ -49,21 +49,16 @@ Started with initial preparation of the data. Imported all the packages and load
 
 I used OLS Regression Results and Scikit Learn to build a multilinear regression model to predict house prices using the King County House Sales dataset.
 
-Model1:
+
+![graph1](reports/Model.png)
+
+![graph1](reports/Model1.png)
+
+![graph1](reports/Model2.png)
 
 ![graph1](reports/Model3.png)
 
 ![graph2](reports/Model4.png)
-
-![graph3](reports/Model5.png)
-
-![graph4](reports/Model6.png)
-
-![graph5](reports/Model7.png)
-
-![graph6](reports/Model8.png)
-
-![graph7](reports/Model9.png)
 
 
 
