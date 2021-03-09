@@ -54,7 +54,7 @@ I used OLS Regression Results and Scikit Learn to build a multilinear regression
 
 ![graph1](reports/Model1.png)
 
-![graph1](reports/Model2.png)
+![graph1](reports/Mode2.png)
 
 ![graph1](reports/Model3.png)
 
