@@ -4,12 +4,6 @@
 This repository offers an analysis of factors that influence housing prices in King County, WA
 
 
-### Quick Link
-
-[notebooks/exploratory/Home-Price-Analysis.ipynb] (notebooks/exploratory/final_notebook.ipynb)
-
-
-### Setup Instructions
 
 Environment setup process:
 
