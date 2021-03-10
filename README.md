@@ -1,3 +1,4 @@
+![img1](https://user-images.githubusercontent.com/70337178/110574559-5126b480-812b-11eb-9546-63d0d86c6649.jpeg)
 # King County Home Price Analysis
 
 This repository offers an analysis of factors that influence housing prices in King County, WA
