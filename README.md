@@ -11,41 +11,33 @@ Environment setup process:
 
 - conda activate ENV
 
-- conda install pandas
-
-- conda install jupyter
-
-- conda env export > environment.yml        
-
 
 ## Business Understanding
 
 King County is located in the U.S. state of Washington. The population was 2,252,782 in the 2019 census estimate, making it the most populous county in Washington, and the 12th-most populous in the United States. All this growth has increased demand for housing and caused home prices to skyrocket. A client in King County, WA wants to advise homeowners on home improvement projects that will add sale value of their homes.
 
 
-This is a difficult market for home buyers, so this project will help buyers decide what trade-offs are worthwhile to find the best house for their needs in their price range. My role is to build a linear regression model to represent home sale prices in King County, and use it to advise homeowners on which home improvement projects will add to their home sale values.
+This is a complex market for home buyers and my goal is to build a linear regression model to represent home sale prices in King County, and use it to advise homeowners on which home improvement projects will add to their home sale values.
 
 ## Data Understanding
 
 The tables required for this analysis are:
 
-- Real Property Sales (EXTR_RPSale.csv)
-- Residential Building (EXTR_ResBldg.csv)
-- Parcel (EXTR_Parcel.csv)
+- Real Property Sales 
+- Residential Building 
+- Parcel 
 
+There were total of 251300 rows and 136 columns in the 
 
 ## Data Preparation
 
-There were (251300 rows , 136 columns)
-Started with initial preparation of the data. Imported all the packages and loaded the csv file into dataframe. I have done initial cleaning of the data before merging them. Using (Major and Minor)columns, i merged all the three tables. There were about (251300 rows and 136 columns) in my initial data process. After thorough cleaning of the data, i narrowed down to (18204 rows and 57 columns). I used these 57 columns for my linear regression process. I followed CRISP-DM process.
+Imported all the packages and loaded the csv file into dataframe. I have done initial cleaning of the data before merging them. Using (Major and Minor)columns, i merged all the three tables. There were about (251300 rows and 136 columns) in my initial data process. After thorough cleaning of the data, i narrowed down to (18204 rows and 57 columns). I used these 57 columns for my linear regression process. I followed CRISP-DM process.
 
 
 ## Modeling
 
 I used OLS Regression Results and Scikit Learn to build a multilinear regression model to predict house prices using the King County House Sales dataset.
 
-
-![graph1](reports/Model.png)
 
 ![graph1](reports/Model1.png)
 
