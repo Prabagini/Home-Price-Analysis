@@ -37,7 +37,7 @@ Started with initial cleaning of the given datasets. In the parcel,rpsale,reside
 
 I have used OLS Regression Results and Scikit Learn to build a multilinear regression model to predict house prices using the King County House Sales dataset.
 
-Visual1:
+## Visual1:
 
 The heatmap plot were generated to find the features that are most correlated with the SalePrice target.
 
@@ -45,46 +45,32 @@ The heatmap plot were generated to find the features that are most correlated wi
 
 In this heatmap SalePrice is highly correlated to SqFtTotLiving. Saleprice is fairly correlated to SqFt1stFloor, SqFt2ndFloor, BathFullCount, SqFtFinBasement.
 
-Visual2:
+## Visual2:
 
 Starting with a simple model. The targeted variable is SalePrice and i'm taking one independent variable which is highly correlated with Saleprice. Building a simple model.
 
-![graph1](reports/Mode2.png)
-
-OLS Regression Results
-Dep. Variable:	SalePrice	R-squared:	0.398
-Model:	OLS	Adj. R-squared:	0.398
-Method:	Least Squares	F-statistic:	1.205e+04
-Date:	Fri, 05 Mar 2021	Prob (F-statistic):	0.00
-Time:	12:39:28	Log-Likelihood:	-2.6297e+05
-No. Observations:	18204	AIC:	5.259e+05
-Df Residuals:	18202	BIC:	5.260e+05
-Df Model:	1		
-Covariance Type:	nonrobust		
-coef	std err	t	P>|t|	[0.025	0.975]
-Intercept	-2.765e+04	8226.230	-3.361	0.001	-4.38e+04	-1.15e+04
-SqFtTotLiving	382.8579	3.487	109.793	0.000	376.023	389.693
-Omnibus:	23583.917	Durbin-Watson:	1.994
-Prob(Omnibus):	0.000	Jarque-Bera (JB):	13528011.140
-Skew:	6.802	Prob(JB):	0.00
-Kurtosis:	135.854	Cond. No.	5.76e+03
-
 ![graph1](reports/Model3.png)
+
+- This model predicts a saleprice of -27,650 USD when square feet to living is 0 sqft.
+- With an increase in 1 sqft, the saleprice is expected to increase by 382.8579 USD.
+
+## Visual3:
+
+Performing log transformation for both the targeted and predictor variables to see if we could improve the R-squared performance.
 
 ![graph2](reports/Model4.png)
 
+- p-value(0.9999) is greater than (alpha=0.05) alpha value.
+- We fail to reject the null hypothesis. 
 
 
 ## Evaluation
 
-Started with simple linear regression model. In model2 added log transform for both targeted variable and predictor but there was a drop in R-squared value. In model3 removied outliers from targeted variable and proceed with analysis. With an increase in 1 sqft, the saleprice is expected to increase by $200.44. In the model4 performed square root scaling and With an increase in 1 sqft, the saleprice is expected to increase by $1.825e+04. In the model5 added new predictors and the R-squared value has increased from 0.313 to 0.399. In the model6 added additional predictors such as SqFt1stFloor, SqFt2ndFloor, BathFullCount and the  R-squared value has increased from 0.399 to 0.40.
-
-In the model7 added categorical features. Adding categorical features such as 'HeatSystem', 'HeatSource', 'Bedrooms', 'BldgGrade', Model 7 tells that about 53.2% variance of SalePrice. But the p-value(0.03777) is lesser than (alpha=0.05) alpha value. So we reject the null hypothesis. It fails to the linearity assumptions. 
-
+This analysis have iterated through seven regression models, proceeding from a baseline model using one independent feature(SqFtTotLiving), I increased complexity of the model by adding additional predictors and applying transformations to both the predictors and the target. After each model was developed the assumptions of linear regression were evaluated. My baseline model had an r squared of 0.398 and violated the linearity and homoscedasticity assumptions. My final model had an R squared of 0.532 and violated the linearity and homoscedasticity assumptions. This final model used these features 'HeatSystem', 'HeatSource', 'Bedrooms', 'BldgGrade' as predictors. 
 
 ## Conclusion
 
-Home buyers in this market who are looking to maximize their dollars should carefully consider the locations in which they search. This will make the biggest impact on how far their budget will go. The second most important factor in housing is the square footage of the house.
+Home buyers who are looking to maximize their dollars should carefully consider the locations in which they search. The second most important factor in housing is the square footage of the house.
 
 This model can account for 53.2% of the variability in house prices in King County, which is a 10% increase from my initial model. I think the model is a decent start, but could be improved by doing more to work out the best transformation method for each feature.
 
