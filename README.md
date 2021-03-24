@@ -21,27 +21,53 @@ This is a complex market for home buyers and my goal is to build a linear regres
 
 ## Data Understanding
 
-The tables required for this analysis are:
-
+ I have been provided with King County House Sales datasets: 
+ 
 - Real Property Sales 
 - Residential Building 
 - Parcel 
 
-There were total of 251300 rows and 136 columns in the 
+There were total of 2,51,300 rows and 136 columns in the given datasets. 
 
 ## Data Preparation
 
-Imported all the packages and loaded the csv file into dataframe. I have done initial cleaning of the data before merging them. Using (Major and Minor)columns, i merged all the three tables. There were about (251300 rows and 136 columns) in my initial data process. After thorough cleaning of the data, i narrowed down to (18204 rows and 57 columns). I used these 57 columns for my linear regression process. I followed CRISP-DM process.
-
+Started with initial cleaning of the given datasets. In the parcel,rpsale,residential building tables there are columns with null values and i have dropped those columns. concatenating three tables using (Major and Minor)columns. There were about (2,51,300 rows and 136 columns) in my initial data process. After the thorough data cleaning, i have narrowed down to (18204 rows and 57 columns). Since my focus of the project is on 2019, I decided to only look at transactions that were documented within 2019 and For my analysis i'm going to Focus on the Data for 'Single Family Units' property type because it has more data. The final dataframe used for my analysis contains 18,204 rows and 57 columns. CRISP-DM stands for cross-industry process for data mining. I have followed CRISP-DM process for my data modelling process. 
 
 ## Modeling
 
-I used OLS Regression Results and Scikit Learn to build a multilinear regression model to predict house prices using the King County House Sales dataset.
+I have used OLS Regression Results and Scikit Learn to build a multilinear regression model to predict house prices using the King County House Sales dataset.
 
+Visual1:
+
+The heatmap plot were generated to find the features that are most correlated with the SalePrice target.
 
 ![graph1](reports/Model1.png)
 
+In this heatmap SalePrice is highly correlated to SqFtTotLiving. Saleprice is fairly correlated to SqFt1stFloor, SqFt2ndFloor, BathFullCount, SqFtFinBasement.
+
+Visual2:
+
+Starting with a simple model. The targeted variable is SalePrice and i'm taking one independent variable which is highly correlated with Saleprice. Building a simple model.
+
 ![graph1](reports/Mode2.png)
+
+OLS Regression Results
+Dep. Variable:	SalePrice	R-squared:	0.398
+Model:	OLS	Adj. R-squared:	0.398
+Method:	Least Squares	F-statistic:	1.205e+04
+Date:	Fri, 05 Mar 2021	Prob (F-statistic):	0.00
+Time:	12:39:28	Log-Likelihood:	-2.6297e+05
+No. Observations:	18204	AIC:	5.259e+05
+Df Residuals:	18202	BIC:	5.260e+05
+Df Model:	1		
+Covariance Type:	nonrobust		
+coef	std err	t	P>|t|	[0.025	0.975]
+Intercept	-2.765e+04	8226.230	-3.361	0.001	-4.38e+04	-1.15e+04
+SqFtTotLiving	382.8579	3.487	109.793	0.000	376.023	389.693
+Omnibus:	23583.917	Durbin-Watson:	1.994
+Prob(Omnibus):	0.000	Jarque-Bera (JB):	13528011.140
+Skew:	6.802	Prob(JB):	0.00
+Kurtosis:	135.854	Cond. No.	5.76e+03
 
 ![graph1](reports/Model3.png)
 
